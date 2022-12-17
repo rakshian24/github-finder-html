@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400&display=swap'); 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #ffffff;
-
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -43,7 +44,7 @@ a {
     align-items: center;
     padding-left: 18px;
     padding-right: 18px;
-    font-size: 0.85em;
+    font-size: 1em;
 }
 
 #home {
@@ -86,10 +87,15 @@ a {
 #search-btn-container {
     background-color: #353935;
     width: 20%;
+    height: 100%;
     font-size: 1em;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
 }
 
 #footer {
