@@ -53,12 +53,18 @@ a {
   padding-right: 18px;
 }
 
-#body {
+#app-body {
   background-color: #36454F;
   height: calc(100vh - 4.5rem - 6.5rem);
   display: flex;
   align-items: center;
   padding-left: 8rem;
+}
+
+#input-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 #input-container {
@@ -67,7 +73,6 @@ a {
   display: flex;
   align-items: center;
   border-radius: 8px;
-
 }
 
 #input {
@@ -85,6 +90,7 @@ a {
   border-bottom-right-radius: 0;
 }
 
+/* Animation class to move the input wrapper from center of the page to top - start */
 .animate-input {
   animation: inputAnimate 500ms ease-out;
   animation-fill-mode: forwards;
@@ -95,6 +101,22 @@ a {
     transform: translate(0px, -650%);
   }
 }
+
+/* Animation class to move the input wrapper from center of the page to top - end */
+
+/* Animation class to move the input wrapper from top to center of page - start */
+.animate-input-back {
+  animation: inputAnimateBack 500ms ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes inputAnimateBack {
+  0% {
+    transform: translate(0px, -650%);
+  }
+}
+
+/* Animation class to move the input wrapper from top to center of page - end */
 
 #search-btn-container {
   background-color: #353935;
@@ -108,6 +130,19 @@ a {
   border-bottom-right-radius: 8px;
   cursor: pointer;
   font-weight: 600;
+}
+
+#clear-btn {
+  margin-left: 20px;
+  height: 3rem;
+  background-color: #666362;
+  width: 100px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 8px;
+  display: none;
 }
 
 #footer {
@@ -150,7 +185,7 @@ a {
     font-size: 0.9em;
   }
 
-  #body {
+  #app-body {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -159,6 +194,11 @@ a {
     width: 100%;
   }
 
+  #input-wrapper {
+    width: 100%;
+  }
+
+  /* Animation class to move the input wrapper from center of the page to top - start */
   .animate-input {
     animation: inputAnimate 500ms ease-out;
     animation-fill-mode: forwards;
@@ -169,6 +209,22 @@ a {
       transform: translate(0px, -580%);
     }
   }
+
+  /* Animation class to move the input wrapper from center of the page to top - end */
+
+  /* Animation class to move the input wrapper from top to center of page - start */
+  .animate-input-back {
+    animation: inputAnimateBack 500ms ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes inputAnimateBack {
+    0% {
+      transform: translate(0px, -580%);
+    }
+  }
+
+  /* Animation class to move the input wrapper from top to center of page - end */
 }
 
 /* Tablet */
@@ -191,7 +247,7 @@ a {
     font-size: 1.1em;
   }
 
-  #body {
+  #app-body {
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -200,6 +256,11 @@ a {
     width: 100%;
   }
 
+  #input-wrapper {
+    width: 100%;
+  }
+
+  /* Animation class to move the input wrapper from center of the page to top - start */
   .animate-input {
     animation: inputAnimate 500ms ease-out;
     animation-fill-mode: forwards;
@@ -210,10 +271,31 @@ a {
       transform: translate(0px, -900%);
     }
   }
+
+  /* Animation class to move the input wrapper from center of the page to top - end */
+
+  /* Animation class to move the input wrapper from top to center of page - start */
+  .animate-input-back {
+    animation: inputAnimateBack 500ms ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes inputAnimateBack {
+    0% {
+      transform: translate(0px, -900%);
+    }
+  }
+
+  /* Animation class to move the input wrapper from top to center of page - end */
 }
 
 /* 4K Monitors */
 @media screen and (min-width: 1800px) {
+  #input-wrapper{
+    width: 100%;
+  }
+
+  /* Animation class to move the input wrapper from center of the page to top - start */
   .animate-input {
     animation: inputAnimate 500ms ease-out;
     animation-fill-mode: forwards;
@@ -224,10 +306,28 @@ a {
       transform: translate(0px, -980%);
     }
   }
+
+  /* Animation class to move the input wrapper from center of the page to top - end */
+
+  /* Animation class to move the input wrapper from top to center of page - start */
+  .animate-input-back {
+    animation: inputAnimateBack 500ms ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes inputAnimateBack {
+    0% {
+      transform: translate(0px, -980%);
+    }
+  }
+
+  /* Animation class to move the input wrapper from top to center of page - end */
 }
 
 /* Small mobile phones */
 @media only screen and (min-width: 350px) and (max-width: 380px) {
+
+  /* Animation class to move the input wrapper from center of the page to top - start */
   .animate-input {
     animation: inputAnimate 500ms ease-out;
     animation-fill-mode: forwards;
@@ -237,5 +337,25 @@ a {
     100% {
       transform: translate(0, -400%);
     }
+  }
+
+  /* Animation class to move the input wrapper from center of the page to top - end */
+
+  /* Animation class to move the input wrapper from top to center of page - start */
+  .animate-input-back {
+    animation: inputAnimateBack 500ms ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes inputAnimateBack {
+    0% {
+      transform: translate(0px, -400%);
+    }
+  }
+
+  /* Animation class to move the input wrapper from top to center of page - end */
+
+  #input-wrapper {
+    width: 100%;
   }
 }
